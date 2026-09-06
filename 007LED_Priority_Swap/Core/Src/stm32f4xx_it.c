@@ -26,7 +26,7 @@
 
 /* Private typedef -----------------------------------------------------------*/
 /* USER CODE BEGIN TD */
-
+extern void button_interrupt_handler(void);
 /* USER CODE END TD */
 
 /* Private define ------------------------------------------------------------*/

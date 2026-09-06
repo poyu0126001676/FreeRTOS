@@ -365,7 +365,7 @@ static void task2_handler(void* parameters)
 
 void button_interrupt_handler(void)
 {
-	traceISR_ENTER();
+	traceISR_ENTER();  // 使用 SEGGER 追蹤
 	UBaseType_t p1 = uxTaskPriorityGet(task1_handle);
 	UBaseType_t p2 = uxTaskPriorityGet(task2_handle);
 

@@ -88,7 +88,8 @@ int main(void)
   /* MCU Configuration--------------------------------------------------------*/
 
   /* Reset of all peripherals, Initializes the Flash interface and the Systick. */
-  HAL_Init();
+
+	HAL_Init();  // 底層硬體初始化
 
   /* USER CODE BEGIN Init */
 
@@ -338,8 +339,8 @@ static void MX_GPIO_Init(void)
 static void led_green_handler(void* parameters){
 	while(1){
 		HAL_GPIO_TogglePin(GPIOD, LED_GREEN_PIN);
-		//HAL_Delay(1000);
-		vTaskDelay(pdMS_TO_TICKS(1000));
+		//HAL_Delay(1000);   // 佔著 CPU 空轉，不做其他事
+		vTaskDelay(pdMS_TO_TICKS(1000));  // 會去做其他 task，此 task 先休 1000 ticks -> 適用 RTOS
 	}
 }
 

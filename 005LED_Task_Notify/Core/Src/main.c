@@ -119,7 +119,7 @@ int main(void)
 
   SEGGER_SYSVIEW_Start();
 
-  //  Priority : Button > green > orange > red
+  //  Priority : Button > green > orange > red (越大越優先)
 
   status = xTaskCreate(led_green_handler, "LED green Task", 200, NULL, 3, &ledg_handle); // LD4
 
@@ -355,7 +355,7 @@ static void led_green_handler(void* parameters){
 		//HAL_Delay(1000);
 		//vTaskDelay(pdMS_TO_TICKS(1000));
 
-		status = xTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(1000));
+		status = xTaskNotifyWait(0, 0, NULL, pdMS_TO_TICKS(1000));  // 有其他task打擾，即切斷，回傳pdTRUE
 		if(status==pdTRUE){
 
 			// prevent scheduler from doing context switch, give the resource to other tasks -> like "Critical Section"
