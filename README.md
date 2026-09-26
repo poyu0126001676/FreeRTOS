@@ -268,7 +268,3 @@ FreeRTOS/
 - Queue
 - Semaphore
 - UART Communication
-
-- DMA UART
-- Queue-based UART RX
-- SEGGER SystemView Runtime Analysis
