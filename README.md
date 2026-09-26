@@ -2,7 +2,7 @@
 
 本 Repository 為使用 **STM32F407 + FreeRTOS** 進行 RTOS 與 Embedded System 練習的專案集合。
 
-從基本 Task Scheduling 開始，逐步實作 Task Priority、Task Notification、Semaphore、ISR 與 UART CLI，理解 RTOS 中 Multitasking、Synchronization 與 Event-driven Design。
+從基本 Task Scheduling 開始，逐步實作 Task Priority、Task Notification、Semaphore、ISR 與 UART 。
 
 ---
 
@@ -26,8 +26,6 @@
 - Binary Semaphore
 - Interrupt / ISR
 - UART Communication
-- CLI Command Parsing
-- Task Synchronization
 
 ---
 
