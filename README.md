@@ -260,17 +260,14 @@ FreeRTOS/
 
 ## 實作重點
 
-- RTOS Task Scheduling
+- Task Scheduling
 - Preemptive Multitasking
 - Task Priority
 - Context Switching
 - Task Notification
 - Queue
 - Semaphore
-- ISR / Task Synchronization
-- Concurrent Firmware Design
 - UART Communication
-- CLI / Command Parsing
 
 - DMA UART
 - Queue-based UART RX
